@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
 // Configuração do Google Signin
@@ -25,6 +25,16 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [contadorAcertos, setContadorAcertos] = useState(0);
   const [contadorFeitos, setContadorFeitos] = useState(0);
+  const [porcentagem, setPorcentagem] = useState("0.00"); 
+
+useEffect(() => {
+  if (contadorFeitos > 0) {
+    setPorcentagem(((contadorAcertos * 100) / contadorFeitos).toFixed(1));
+  } else {
+    setPorcentagem("0.00"); 
+  }
+}, [contadorAcertos, contadorFeitos]); 
+
 
   const login = async () => {
     const user = await onLogin();
@@ -50,6 +60,8 @@ export const AuthProvider = ({ children }) => {
         setContadorAcertos,
         contadorFeitos,
         setContadorFeitos,
+        porcentagem,
+        setPorcentagem
       }}>
       {children}
     </AuthContext.Provider>

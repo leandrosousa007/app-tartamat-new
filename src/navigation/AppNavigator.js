@@ -6,6 +6,8 @@ const AppNavigator = () => {
 		<NavigationContainer>
 			<DrawerNavigator />
 		</NavigationContainer>
+
+		
 	);
 };
 

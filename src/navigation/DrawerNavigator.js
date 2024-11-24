@@ -12,6 +12,7 @@ import JogosScreen from '../screens/JogosScreen';
 import VideoScreen from '../screens/VideoScreen';
 import LogoTitle from '../components/LogoTitle';
 import { Text, ActivityIndicator } from 'react-native';
+import Exercicio from '../screens/Exercicio';
 
 const Drawer = createDrawerNavigator();
 
@@ -36,25 +37,27 @@ export default function DrawerNavigator() {
     <Drawer.Navigator
       initialRouteName="Inicio"
       screenOptions={{
-        headerStyle: { backgroundColor: '#396934' },
+        headerStyle: { backgroundColor: '#32620e' },
         headerTitleAlign: 'center',
         headerTitle: () => (
           <Text
             style={{
-              fontSize: 28,
+              fontSize: 35,
               fontWeight: '600',
               color: 'white',
               paddingRight: 16,
-              fontFamily: 'ChalkboardSE-Regular',
+              fontFamily: 'Cursive',
             }}>
-            Matematicando
+            Tartamat
           </Text>
         ),
         headerRight: () => <LogoTitle />,
       }}>
       <Drawer.Screen name="Inicio" component={TabNavigator} />
-      <Drawer.Screen name="Jogos" component={JogosScreen} />
+      <Drawer.Screen name="Exercícios" component={Exercicio} />
       <Drawer.Screen name="Video aulas" component={VideoScreen} />
+      <Drawer.Screen name="Jogos" component={JogosScreen} />
+      <Drawer.Screen name="ExercíciosTeste" component={ExerciciosScreen} />
     </Drawer.Navigator>
   );
 }

@@ -17,6 +17,7 @@ function EstatisticasScreen() {
       value: contadorFeitos - contadorAcertos,
       color: '#f44336',
     },
+    
   ];
 
   return (

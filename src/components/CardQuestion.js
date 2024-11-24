@@ -1,4 +1,5 @@
-import { Alert, Text, View, Pressable } from 'react-native';
+import React from 'react';
+import { Text, View, Pressable } from 'react-native';
 import styles from '../styles/styles';
 
 export const CardQuestion = ({ handlePress, item }) => {
@@ -9,7 +10,7 @@ export const CardQuestion = ({ handlePress, item }) => {
         {item.respostas.map((resposta, index) => (
           <Pressable
             key={index}
-            onPress={() => Alert.alert(handlePress(resposta, item))}
+            onPress={() => handlePress(resposta, item)} // Remover o Alert e chamar handlePress
             style={styles.optionButton}>
             <Text style={styles.optionText}>{resposta.texto}</Text>
           </Pressable>

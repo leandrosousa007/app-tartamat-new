@@ -1,9 +1,10 @@
 {
   "expo": {
-    "name": "matematicando",
-    "slug": "matematicando",
+    "name": "tartamat",
+    "slug": "tartamat",
     "version": "1.0.0",
     "orientation": "portrait",
+    "sdkVersion": "52.0.3",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
@@ -29,7 +30,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "7267d139-f17f-47f4-8884-b61774293ac5"
+        "projectId": "eefeed18-1cdd-49ab-86ba-65e876b52755"
       }
     }
   }

@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   ActivityIndicator,
+  Image,
 } from 'react-native';
 import { AuthContext } from '../context/AuthContext';
 
@@ -19,10 +20,14 @@ const LoginScreen = () => {
     <View style={styles.container}>
       {isSigninInProgress && <ActivityIndicator style={styles.loader} />}
       <View style={styles.header}>
-        <Text style={styles.welcomeText}>Bem vindo</Text>
+        <Text style={styles.welcomeText}>Welcome To</Text>
         <Text style={styles.appName}>TartaMat</Text>
       </View>
       <View style={styles.loginSection}>
+      <Image
+        source={require('../../assets/tartaruga.png')}
+        style={styles.image}
+      />
         <Text style={styles.title}>Login</Text>
         <TextInput
           style={styles.input}
@@ -61,6 +66,12 @@ const LoginScreen = () => {
           >
           <Text style={styles.signupText}>Crie sua conta <Text style={styles.signupLink}>Criar Agora</Text></Text>
         </TouchableOpacity>
+        <Image
+        source={require('../../assets/patinha-preta.png')}
+        style={styles.image2}
+      />
+      
+      
       </View>
     </View>
   );
@@ -84,6 +95,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#e7f0f1',
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
+    marginBottom:40,
   },
   welcomeText: {
     fontSize: 24,
@@ -91,10 +103,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   appName: {
-    fontSize: 32,
+    fontSize: 37,
     color: '#32620e', // Verde aplicado
     fontWeight: 'bold',
-    fontFamily: 'Cursive',
+    fontFamily: 'ChalkboardSE-Regular',
   },
   loginSection: {
     flex: 2,
@@ -141,6 +153,24 @@ const styles = StyleSheet.create({
   signupLink: {
     fontWeight: 'bold',
     textDecorationLine: 'underline',
+  },
+  image:{
+    marginTop: -80,
+  },
+  /*image1: {
+    position: 'absolute',
+    bottom: 0, // Encosta na parte inferior
+    right: -26, // Encosta na lateral direita
+    width: '60%', // Ajuste conforme necessário
+    height: '40%', // Ajuste conforme necessário
+    
+  },*/
+  image2: {
+    position: 'absolute',
+    bottom: 0, // Encosta na parte inferior
+    left: 10, // Encosta na lateral esquerda
+    width: '30%', // Ajuste conforme necessário
+    height: '16%', // Ajuste conforme necessário
   },
 });
 

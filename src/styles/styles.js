@@ -5,13 +5,37 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#f0f8ff',
     padding: 20,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
-    color: '#333',
     marginBottom: 20,
     textAlign: 'center',
+    color: '#333',
+  },
+  infoContainer: {
+    marginBottom: 20,
+    alignItems: 'center',
+  },
+  infoText: {
+    fontSize: 18,
+    color: '#555',
+  },
+  finishButton: {
+    backgroundColor: '#22c55e',
+    padding: 12,
+    borderRadius: 8,
+    marginTop: 20,
+    alignItems: 'center',
+    width: '80%', // Definido para maior largura do botão
+    height: 50, // Maior altura para o botão
+  },
+  finishButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
   itemContainer: {
     backgroundColor: '#fff',
@@ -30,7 +54,7 @@ export default StyleSheet.create({
     marginBottom: 10,
   },
   optionButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#32620e',
     padding: 15,
     borderRadius: 5,
     marginVertical: 5,
